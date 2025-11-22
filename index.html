@@ -13,7 +13,7 @@
         }
 
         body {
-            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -26,21 +26,22 @@
             text-align: center;
             padding: 30px;
             border-radius: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             max-width: 500px;
             width: 90%;
             transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         h1 {
-            color: #ff6b81;
+            color: #5d6d7e;
             margin-bottom: 20px;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
         }
 
         p {
-            color: #555;
+            color: #566573;
             margin-bottom: 30px;
             font-size: 1.2rem;
         }
@@ -49,13 +50,13 @@
             width: 200px;
             height: 200px;
             margin: 0 auto 30px;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(116, 185, 255, 0.3);
             transition: transform 0.2s ease;
             user-select: none;
         }
@@ -76,7 +77,7 @@
 
         .counter {
             font-size: 1.2rem;
-            color: #ff6b81;
+            color: #2d3436;
             font-weight: bold;
             margin-bottom: 20px;
         }
@@ -86,8 +87,8 @@
         }
 
         .confession {
-            font-size: 2.5rem;
-            color: #ff6b81;
+            font-size: 2.2rem;
+            color: #2d3436;
             margin: 30px 0;
             animation: pulse 2s infinite;
         }
@@ -95,18 +96,18 @@
         .also-link {
             display: inline-block;
             margin-top: 20px;
-            color: #ff6b81;
+            color: #74b9ff;
             font-weight: bold;
             text-decoration: none;
             font-size: 1.2rem;
-            border: 2px solid #ff6b81;
+            border: 2px solid #74b9ff;
             padding: 10px 20px;
             border-radius: 50px;
             transition: all 0.3s ease;
         }
 
         .also-link:hover {
-            background-color: #ff6b81;
+            background-color: #74b9ff;
             color: white;
             transform: scale(1.05);
         }
@@ -114,7 +115,7 @@
         .heart {
             position: absolute;
             font-size: 20px;
-            color: #ff6b81;
+            color: #74b9ff;
             animation: float 5s ease-in-out infinite;
             z-index: -1;
         }
@@ -122,7 +123,7 @@
         /* Animation for the confession text */
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
 
@@ -158,36 +159,49 @@
         .page2 h1 {
             text-align: center;
             margin-bottom: 30px;
+            color: #2d3436;
         }
 
         .quality {
-            background: white;
+            background: rgba(255, 255, 255, 0.8);
             padding: 15px;
             margin: 15px 0;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
+            border-left: 4px solid #74b9ff;
         }
 
         .quality:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
+        }
+
+        .quality h3 {
+            color: #2d3436;
+            margin-bottom: 8px;
+        }
+
+        .quality p {
+            color: #566573;
+            margin-bottom: 0;
+            line-height: 1.5;
         }
 
         .back-link {
             display: inline-block;
             margin-top: 30px;
-            color: #ff6b81;
+            color: #74b9ff;
             font-weight: bold;
             text-decoration: none;
             font-size: 1.2rem;
-            border: 2px solid #ff6b81;
+            border: 2px solid #74b9ff;
             padding: 10px 20px;
             border-radius: 50px;
             transition: all 0.3s ease;
         }
 
         .back-link:hover {
-            background-color: #ff6b81;
+            background-color: #74b9ff;
             color: white;
         }
     </style>
@@ -195,10 +209,8 @@
 <body>
     <!-- Page 1: Click Counter -->
     <div id="page1" class="container">
-        <h1> I think I might have something to tell you...</h1>
+        <h1>I think I might have something to tell you...</h1>
         <p>Please don't get mad:(</p>
-        <p>Click it <span id="requiredClicks">30</span> times...</p>
-        
         <div class="counter">Clicks: <span id="clickCount">0</span></div>
         
         <div class="click-area" id="clickArea">
@@ -213,35 +225,25 @@
 
     <!-- Page 2: Things I Like About You -->
     <div id="page2" class="container page2 hidden">
-        <h1>Things I Really Like About You </h1>
+        <h1>Don't tell anyone please...</h1>
         
         <div class="quality">
-            <h3>You have beautiful earring on</h3>
+            <h3>If we are drunk don't read this</h3>
         </div>
         
         <div class="quality">
             <h3>You are amazing</h3>
-            <p>You have the biggest heart and always care about others(except the jws).</p>
+            <p>You have the biggest heart and always care about others (except the jws).</p>
         </div>
         
         <div class="quality">
             <h3>Your Italian teaching skills</h3>
-            <p>I can say "io mi piace i piedi formaggiosi" because of you</p>
+            <p>I can say "io mi piace i piedi formaggiosi" because of YOU</p>
         </div>
         
         <div class="quality">
-            <h3>Your Intelligence </h3>
-            <p>I'm constantly amazed by how smart and insightful you are.</p>
-        </div>
-        
-        <div class="quality">
-            <h3>Your Passion</h3>
-            <p>When you care about something, you give it your all.</p>
-        </div>
-        
-        <div class="quality">
-            <h3>You opened my eyes</h3>
-            <p>In the beginning when I arrived here I was expecting to see spoiled, stupid, closed-minded girls that only care about superficial things that, in the end, are worthless, you changed my views on this... You 	are a girl that really cares, you show that you can also give, not only receive in our relationship, ive never seen a girl so amazing. </p>
+            <h3>No but if I am serious</h3>
+            <p>In the beginning when I arrived here I was expecting to see spoiled, stupid, closed-minded, mean girls that only care about superficial things that, in the end, are worthless, you changed my views on this...</p>
         </div>
         
         <a href="#" id="backLink" class="back-link">Back to the confession</a>
@@ -271,9 +273,9 @@
             const shakeIntensity = Math.min(clickCount / requiredClicks * 20, 20);
             body.style.animation = `shake 0.5s ease-in-out`;
             
-            // Change background color slightly
-            const hue = 340 + (clickCount / requiredClicks * 20);
-            body.style.background = `linear-gradient(135deg, hsl(${hue}, 100%, 85%), hsl(${hue + 20}, 100%, 80%))`;
+            // Change background color slightly (blue/purple theme)
+            const hue = 260 + (clickCount / requiredClicks * 40); // Blue to purple range
+            body.style.background = `linear-gradient(135deg, hsl(${hue}, 70%, 65%), hsl(${hue + 30}, 70%, 55%))`;
             
             // Create floating hearts
             createHeart();
